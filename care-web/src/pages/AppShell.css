@@ -1,0 +1,242 @@
+.app-root {
+  position: relative;
+  min-height: 100dvh;
+}
+
+.bg-atmosphere.soft {
+  opacity: 0.28;
+}
+
+.app-frame {
+  padding: 1.15rem 1.15rem 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.app-header .brand-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.app-header .brand-inline img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(126, 182, 255, 0.45);
+  object-fit: cover;
+}
+
+.app-header .brand-inline strong {
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+}
+
+.app-header .brand-inline span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.page-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 0.85rem 0.45rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(10, 20, 34, 0.72);
+}
+
+.feature strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.feature span {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.cabin-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  min-height: 160px;
+}
+
+.cabin-visual img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: saturate(0.92) brightness(0.82);
+}
+
+.cabin-visual .caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(4, 7, 13, 0.92));
+  font-size: 0.86rem;
+  color: #dce7f8;
+}
+
+.alert-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 59, 74, 0.4);
+  background: linear-gradient(160deg, rgba(143, 16, 32, 0.35), rgba(20, 8, 12, 0.85));
+}
+
+.alert-cta h3 {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.alert-cta p {
+  margin: 0;
+  color: #ffd0d4;
+  font-size: 0.92rem;
+}
+
+.capture-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #05080f;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.capture-frame img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.capture-empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.alert-screen {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert-screen .warning {
+  width: 78px;
+  height: 78px;
+  margin: 0.4rem auto 0;
+  color: var(--danger);
+  animation: alertPulse 1.2s ease-in-out infinite;
+}
+
+.alert-screen h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}
+
+.alert-screen .sub {
+  margin: -0.35rem 0 0;
+  color: #ffb4ba;
+  font-weight: 600;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.meta-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.75rem;
+  background: rgba(10, 20, 34, 0.7);
+  text-align: left;
+}
+
+.meta-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.meta-item strong {
+  font-size: 0.92rem;
+}
+
+.settings-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.1rem;
+  background: rgba(10, 20, 34, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.settings-card h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.settings-row span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.settings-row strong {
+  text-align: right;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.LivePage"
+             BackgroundColor="#080C1C"
+             Title="Live Feed">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Live Stream Screen -->
+            <Border BackgroundColor="Black" Stroke="#334155" StrokeShape="RoundRectangle 16" HeightRequest="280">
+                <Grid>
+                    <Image x:Name="imgLiveCamera" Aspect="AspectFit" />
+                    <Label Text="● LIVE" TextColor="#EF4444" FontSize="12" FontAttributes="Bold" Margin="12" HorizontalOptions="Start" VerticalOptions="Start" />
+                </Grid>
+            </Border>
+
+            <!-- Status Indicator Card -->
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label x:Name="lblStreamStatus" Text="Cabin status: Clear" TextColor="#10B981" FontSize="16" FontAttributes="Bold" />
+                    <Label x:Name="lblLastFrameTime" Text="Last received: --" TextColor="#94A3B8" FontSize="13" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Refresh Action -->
+            <Button Text="Refresh Stream" BackgroundColor="#2563EB" TextColor="White" FontAttributes="Bold" CornerRadius="10" HeightRequest="48" Clicked="OnRefreshClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

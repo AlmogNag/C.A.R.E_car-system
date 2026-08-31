@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "989038890094",
+    "firebase_url": "https://care-c0bdb-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "care-c0bdb",
+    "storage_bucket": "care-c0bdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989038890094:android:529775d075c4165bf1aa7f",
+        "android_client_info": {
+          "package_name": "com.companyname.care_app_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsQwk6Sxr66Rt76uw3bTZkEBj9QfCAuNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

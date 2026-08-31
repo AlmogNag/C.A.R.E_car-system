@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.LoginPage"
+             BackgroundColor="#080C1C"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+
+            <!-- Logo & Header -->
+            <Label Text="C.A.R.E" TextColor="#F5F7FA" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Text="Car Alert &amp; Reminder Eye" TextColor="#94A3B8" FontSize="14" HorizontalTextAlignment="Center" />
+
+            <!-- Card Inputs -->
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="20">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="PHONE NUMBER" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtPhone" Keyboard="Telephone" TextColor="#F5F7FA" BackgroundColor="#0A0F22" Placeholder="Enter phone" />
+
+                    <Label Text="PASSWORD" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtPassword" IsPassword="True" TextColor="#F5F7FA" BackgroundColor="#0A0F22" Placeholder="••••••••" />
+
+                    <Label x:Name="lblError" TextColor="#EF4444" FontSize="12" HorizontalTextAlignment="Center" />
+
+                    <Button x:Name="btnSignIn" Text="Sign in" BackgroundColor="#2563EB" TextColor="White" FontAttributes="Bold" HeightRequest="48" CornerRadius="8" Clicked="OnSignInClicked" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Go to Register Link -->
+            <Label Text="New guardian? Create account" TextColor="#94A3B8" FontSize="14" HorizontalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGoToRegisterTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

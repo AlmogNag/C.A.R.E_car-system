@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.RegisterPage"
+             BackgroundColor="#080C1C"
+             Title="Create Account">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="25" VerticalOptions="Center">
+
+            <Label Text="Create Guardian Account" TextColor="#F5F7FA" FontSize="22" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="20">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="FULL NAME" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtFullName" TextColor="#F5F7FA" BackgroundColor="#0A0F22" Placeholder="Full name" />
+
+                    <Label Text="PHONE NUMBER (ID)" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtRegPhone" Keyboard="Telephone" TextColor="#F5F7FA" BackgroundColor="#0A0F22" Placeholder="Phone number" />
+
+                    <Label Text="PASSWORD" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtRegPass" IsPassword="True" TextColor="#F5F7FA" BackgroundColor="#0A0F22" Placeholder="••••••••" />
+
+                    <Label Text="CAMERA CODE" TextColor="#94A3B8" FontSize="11" FontAttributes="Bold" />
+                    <Entry x:Name="txtRegCam" Text="CARE_CAMERA_01" TextColor="#F5F7FA" BackgroundColor="#0A0F22" />
+
+                    <Label x:Name="lblRegStatus" TextColor="#EF4444" FontSize="12" HorizontalTextAlignment="Center" />
+
+                    <Button x:Name="btnRegister" Text="Register Account" BackgroundColor="#2563EB" TextColor="White" FontAttributes="Bold" HeightRequest="48" CornerRadius="8" Clicked="OnRegisterClicked" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

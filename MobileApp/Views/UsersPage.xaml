@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CARE_App_Mobile"
+             x:Class="CARE_App_Mobile.Views.UsersPage"
+             BackgroundColor="#080C1C"
+             Title="Connected Guardians">
+
+    <Grid RowDefinitions="Auto,*" Padding="15" RowSpacing="15">
+
+        <!-- Info Header Card -->
+        <Border Grid.Row="0" BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="15">
+            <VerticalStackLayout Spacing="5">
+                <Label Text="AUTHORIZED GUARDIANS" TextColor="#FF7070" FontSize="12" FontAttributes="Bold" />
+                <Label Text="All guardians listed below receive simultaneous alerts for this vehicle." TextColor="#94A3B8" FontSize="13" />
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Guardians Collection -->
+        <CollectionView Grid.Row="1" x:Name="cvUsers">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:Participant">
+                    <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 12" Padding="15" Margin="0,5">
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="15">
+                            <Label Grid.Column="0" Text="👤" FontSize="24" VerticalOptions="Center" />
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                                <Label Text="{Binding FullName}" TextColor="#F5F7FA" FontSize="15" FontAttributes="Bold" />
+                                <Label Text="{Binding Phone, StringFormat='Phone: {0}'}" TextColor="#94A3B8" FontSize="13" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

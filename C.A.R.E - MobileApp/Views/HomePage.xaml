@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.HomePage"
+             BackgroundColor="#080C1C"
+             Title="C.A.R.E Hub">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Personal Greeting & Hero Status -->
+            <Border BackgroundColor="#0F172A" Stroke="#1E293B" StrokeShape="RoundRectangle 16" Padding="20">
+                <VerticalStackLayout Spacing="8">
+                    <!-- Personal greeting -->
+                    <Label x:Name="lblGreeting" Text="Hello, Guardian 👋" TextColor="#38BDF8" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+                    <Label Text="● SYSTEM SECURED &amp; ACTIVE" TextColor="#10B981" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,5,0,0" />
+                    <Label x:Name="lblHeroHeader" Text="All clear in the cabin" TextColor="#F5F7FA" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label x:Name="lblHeroSub" Text="C.A.R.E is actively watching the back seat" TextColor="#94A3B8" FontSize="13" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Camera Hub Summary Card -->
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 16" Padding="20">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Camera hub" TextColor="#F5F7FA" FontSize="18" FontAttributes="Bold" />
+                    <Label x:Name="lblLinkedCam" Text="Linked camera: CARE_CAMERA_01" TextColor="#94A3B8" FontSize="13" />
+
+                    <!-- 3 Metric Boxes -->
+                    <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                        <Border Grid.Column="0" BackgroundColor="#161F3D" StrokeShape="RoundRectangle 10" Padding="10">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="Guardians" TextColor="#94A3B8" FontSize="11" />
+                                <Label x:Name="lblUsersCount" Text="0 users" TextColor="#F5F7FA" FontSize="14" FontAttributes="Bold" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border Grid.Column="1" BackgroundColor="#161F3D" StrokeShape="RoundRectangle 10" Padding="10">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="Captures" TextColor="#94A3B8" FontSize="11" />
+                                <Label x:Name="lblCapturesCount" Text="0 captures" TextColor="#F5F7FA" FontSize="14" FontAttributes="Bold" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border Grid.Column="2" BackgroundColor="#161F3D" StrokeShape="RoundRectangle 10" Padding="10">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="Live State" TextColor="#94A3B8" FontSize="11" />
+                                <Label x:Name="lblLiveState" Text="Clear" TextColor="#10B981" FontSize="14" FontAttributes="Bold" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Quick Action Buttons -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                <Button Grid.Column="0" Text="View Guardians" BackgroundColor="#1E293B" TextColor="#F5F7FA" FontAttributes="Bold" CornerRadius="10" HeightRequest="48" Clicked="OnViewGuardiansClicked" />
+                <Button Grid.Column="1" Text="View Captures" BackgroundColor="#2563EB" TextColor="White" FontAttributes="Bold" CornerRadius="10" HeightRequest="48" Clicked="OnViewCapturesClicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

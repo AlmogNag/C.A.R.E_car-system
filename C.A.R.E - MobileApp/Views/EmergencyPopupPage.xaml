@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.EmergencyPopupPage"
+             BackgroundColor="#B3000000"
+             Shell.NavBarIsVisible="False">
+
+    <!-- Centered layer simulating a pop-up window floating above the application -->
+    <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+        <Border BackgroundColor="#150810" 
+                Stroke="#EF4444" 
+                StrokeThickness="2.5" 
+                StrokeShape="RoundRectangle 20" 
+                Padding="20"
+                MaximumWidthRequest="420"
+                Shadow="{Shadow Brush=Black, Offset='0,10', Radius=20, Opacity=0.8}">
+
+            <VerticalStackLayout Spacing="16">
+
+                <!-- Alert Header -->
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                    <Label Text="🚨 CRITICAL SAFETY ALERT" 
+                           TextColor="#EF4444" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Occupancy detected in cabin!" 
+                           TextColor="#F5F7FA" 
+                           FontSize="14" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <!-- Snapshot Window -->
+                <Border BackgroundColor="Black" Stroke="#334155" StrokeShape="RoundRectangle 12" HeightRequest="220">
+                    <Image x:Name="imgAlertSnapshot" Aspect="AspectFit" />
+                </Border>
+
+                <!-- Source & Timestamp -->
+                <Label x:Name="lblAlertDetails" 
+                       Text="Source: Cabin Camera • Time: --" 
+                       TextColor="#94A3B8" 
+                       FontSize="12" 
+                       HorizontalTextAlignment="Center" />
+
+                <!-- Action Button -->
+                <Button x:Name="btnAcknowledge"
+                        Text="Acknowledge &amp; Dismiss"
+                        BackgroundColor="#EF4444"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="48"
+                        Clicked="OnAcknowledgeClicked" />
+
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CARE_App_Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:CARE_App_Mobile.Views"
+    Shell.BackgroundColor="#080C1C"
+    Shell.ForegroundColor="#F5F7FA"
+    Shell.TitleColor="#F5F7FA">
+
+    <TabBar>
+        <Tab Title="Home" Route="Home">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+        <Tab Title="Activity" Route="Activity">
+            <ShellContent ContentTemplate="{DataTemplate views:ActivityPage}" />
+        </Tab>
+        <Tab Title="Live" Route="Live">
+            <ShellContent ContentTemplate="{DataTemplate views:LivePage}" />
+        </Tab>
+        <Tab Title="Guardians" Route="Guardians">
+            <ShellContent ContentTemplate="{DataTemplate views:UsersPage}" />
+        </Tab>
+        <Tab Title="Settings" Route="Settings">
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+        </Tab>
+    </TabBar>
+</Shell>

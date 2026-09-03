@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CARE_App_Mobile.Views.SettingsPage"
+             BackgroundColor="#080C1C"
+             Title="Settings">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Profile Info Card -->
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label x:Name="lblLoggedTitle" Text="LOGGED GUARDIAN" TextColor="#FF7070" FontSize="12" FontAttributes="Bold" />
+                    <Label x:Name="lblProfileName" Text="Guardian" TextColor="#F5F7FA" FontSize="16" FontAttributes="Bold" />
+                    <Label x:Name="lblProfilePhone" Text="Phone: --" TextColor="#94A3B8" FontSize="13" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Preferences Card -->
+            <Border BackgroundColor="#101730" Stroke="#1E293B" StrokeShape="RoundRectangle 14" Padding="15">
+                <VerticalStackLayout Spacing="15">
+                    <Label x:Name="lblPrefTitle" Text="PREFERENCES" TextColor="#FF7070" FontSize="12" FontAttributes="Bold" />
+                    <Label x:Name="lblLangLabel" Text="App Language / שפת ממשק" TextColor="#F5F7FA" FontSize="14" />
+
+                    <!-- Language Selection Buttons -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                        <Button x:Name="btnEn"
+                                Grid.Column="0"
+                                Text="English"
+                                BackgroundColor="#2563EB"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                HeightRequest="45"
+                                CornerRadius="8"
+                                Clicked="OnEnglishClicked" />
+
+                        <Button x:Name="btnHe"
+                                Grid.Column="1"
+                                Text="עברית"
+                                BackgroundColor="#161F3D"
+                                TextColor="#94A3B8"
+                                FontAttributes="Bold"
+                                HeightRequest="45"
+                                CornerRadius="8"
+                                Clicked="OnHebrewClicked" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Sign Out Button -->
+            <Button x:Name="btnSignOut" Text="Sign Out" BackgroundColor="#DC2626" TextColor="White" FontAttributes="Bold" CornerRadius="10" HeightRequest="48" Clicked="OnSignOutClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
